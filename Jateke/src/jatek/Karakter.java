@@ -60,17 +60,27 @@ public class Karakter {
     return rnd.nextInt(1,7);
     }
     public void hasznal(String nev){
-    for (Felszereles felszereles : felszereles) {
-            if(nev==felszereles.getNev()){
-                this.hasznal(nev, 1);
-            }
-        }
+
+    this.hasznal(nev, 1);
     }
     public void hasznal(String nev,int db){
-       levonas();
+        this.hasznal(nev, db, false);
     }
     public void hasznal(String nev,int db,boolean van){
-     
+        if (van){
+        levonas(nev, db);
+        }
+        else{
+            System.out.println("Nincs eleg");
+        }
+    }
+    public void felvesz(Felszereles felszreles){
+        this.felvesz(1,felszreles);
+    }
+    public void felvesz(int menny,Felszereles felszreles ){
+        for (int i = 0; i < menny; i++) {
+            this.felszereles.add(felszreles);
+        }
     }
     public void levonas(String nev,int db){
         for (Felszereles felszereles : felszereles) {
