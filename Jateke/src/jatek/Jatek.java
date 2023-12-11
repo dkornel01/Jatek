@@ -15,6 +15,7 @@ public class Jatek {
      */
     public static void main(String[] args) {
         Karakter k1=new Karakter();
+        k1.felvesz(new Targy("arany","arany pénz"));
     }
     
 }

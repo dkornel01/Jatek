@@ -60,11 +60,10 @@ public class Karakter {
     return rnd.nextInt(1,7);
     }
     public void hasznal(String nev){
-
     this.hasznal(nev, 1);
     }
     public void hasznal(String nev,int db){
-        this.hasznal(nev, db, false);
+        this.hasznal(nev, db, true);
     }
     public void hasznal(String nev,int db,boolean van){
         if (van){
