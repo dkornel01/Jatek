@@ -15,5 +15,18 @@ public class felszereles {
         this.leiras = leiras;
         this.id = UUID.randomUUID();
     }
+
+    public String getNev() {
+        return nev;
+    }
+
+    public String getLeiras() {
+        return leiras;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+    
     
 }

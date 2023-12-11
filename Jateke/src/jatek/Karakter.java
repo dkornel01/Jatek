@@ -16,11 +16,44 @@ public class Karakter {
     private int eltero,ugyesseg,szerencse;
     private ArrayList<String> felszereles;
 
-    public Karakter(int eltero, int ugyesseg, int szerencse, ArrayList<String> felszereles) {
-        this.eltero =(rnd.nextInt(1,7))*2+12 ;
+    public Karakter(int eltero, int ugyesseg, int szerencse) {
+        this.eltero =(rnd.nextInt(2,13))+12;
         this.ugyesseg = (rnd.nextInt(1,7))+6;
         this.szerencse = (rnd.nextInt(1,7))+6;
+    }
+
+    public int getEltero() {
+        return eltero;
+    }
+
+    public int getUgyesseg() {
+        return ugyesseg;
+    }
+
+    public int getSzerencse() {
+        return szerencse;
+    }
+
+    public void setEltero(int eltero) {
+        this.eltero = eltero;
+    }
+
+    public void setUgyesseg(int ugyesseg) {
+        this.ugyesseg = ugyesseg;
+    }
+
+    public void setSzerencse(int szerencse) {
+        this.szerencse = szerencse;
+    }
+
+    public ArrayList<String> getFelszereles() {
+        return felszereles;
+    }
+
+    public void setFelszereles(ArrayList<String> felszereles) {
         this.felszereles = felszereles;
     }
+    
+    
     
 }
