@@ -27,6 +27,12 @@ public class felszereles {
     public UUID getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "felszereles{" + "nev=" + nev + ", leiras=" + leiras + ", id=" + id + '}';
+    }
+    
     
     
 }

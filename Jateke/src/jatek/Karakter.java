@@ -17,9 +17,9 @@ public class Karakter {
     private ArrayList<String> felszereles;
 
     public Karakter(int eltero, int ugyesseg, int szerencse) {
-        this.eltero =(rnd.nextInt(2,13))+12;
-        this.ugyesseg = (rnd.nextInt(1,7))+6;
-        this.szerencse = (rnd.nextInt(1,7))+6;
+        this.eltero =dobas()+dobas()+12;
+        this.ugyesseg = dobas()+6;
+        this.szerencse = dobas()+6;
     }
 
     public int getEltero() {
@@ -53,6 +53,9 @@ public class Karakter {
     public void setFelszereles(ArrayList<String> felszereles) {
         this.felszereles = felszereles;
     }
+    public int dobas(){
+    return rnd.nextInt(1,7);
+}
     
     
     
