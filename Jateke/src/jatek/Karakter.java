@@ -4,10 +4,13 @@
  */
 package jatek;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author dobrocsi.kornel
  */
 public class Karakter {
-    
+    private int eltero,ugyesseg,szerencse;
+    private ArrayList<String> felszereles;
 }
