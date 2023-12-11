@@ -14,12 +14,15 @@ import java.util.Random;
 public class Karakter {
     Random rnd=new Random();
     private int eltero,ugyesseg,szerencse;
-    private ArrayList<String> felszereles;
+    private ArrayList<Felszereles> felszereles;
+    Felszereles bot=new Felszereles("bot","bot");
+    //Felszereles bot=new Felszereles
 
-    public Karakter(int eltero, int ugyesseg, int szerencse) {
+    public Karakter() {
         this.eltero =dobas()+dobas()+12;
         this.ugyesseg = dobas()+6;
         this.szerencse = dobas()+6;
+        
     }
 
     public int getEltero() {
@@ -46,17 +49,35 @@ public class Karakter {
         this.szerencse = szerencse;
     }
 
-    public ArrayList<String> getFelszereles() {
+    public ArrayList<Felszereles> getFelszereles() {
         return felszereles;
     }
 
-    public void setFelszereles(ArrayList<String> felszereles) {
-        this.felszereles = felszereles;
+    public void setFelszereles(ArrayList<Felszereles> felszereles) {
+        this.felszereles = this.felszereles;
     }
     public int dobas(){
     return rnd.nextInt(1,7);
-}
-    
-    
-    
+    }
+    public void hasznal(String nev){
+    for (Felszereles felszereles : felszereles) {
+            if(nev==felszereles.getNev()){
+                this.hasznal(nev, 1);
+            }
+        }
+    }
+    public void hasznal(String nev,int db){
+       levonas();
+    }
+    public void hasznal(String nev,int db,boolean van){
+     
+    }
+    public void levonas(String nev,int db){
+        for (Felszereles felszereles : felszereles) {
+            if(nev==felszereles.getNev() && db>0  ){
+                db--;
+                this.felszereles.remove(felszereles.getId());
+            }
+        }
+    }
 }

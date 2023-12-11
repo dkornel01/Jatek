@@ -4,18 +4,19 @@
  */
 package jatek;
 
+import java.util.Random;
 import java.util.UUID;
 
-public class felszereles {
+public class Felszereles {
+    Random rnd=new Random();
     private String nev,leiras;
     private UUID id;
 
-    public felszereles(String nev, String leiras) {
+    public Felszereles(String nev, String leiras) {
         this.nev = nev;
         this.leiras = leiras;
         this.id = UUID.randomUUID();
     }
-
     public String getNev() {
         return nev;
     }
