@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package jatek;
 
-/**
- *
- * @author dobrocsi.kornel
- */
+
 public class Jatek {
 
     /**
@@ -15,7 +9,16 @@ public class Jatek {
      */
     public static void main(String[] args) {
         Karakter k1=new Karakter();
-        k1.felvesz(new Targy("arany","arany pénz"));
+        System.out.println(k1.toString());
+        k1.felvesz(new Felszereles("arany","arany pénz"));
+        k1.felvesz(new Felszereles("arany","arany pénz"));
+        k1.felvesz(new Felszereles("arany","arany pénz"));
+        k1.felvesz(new Felszereles("arany","arany pénz"));
+        k1.felvesz(new Felszereles("arany","arany pénz"));
+        k1.felvesz(new Felszereles("arany","arany pénz"));
+        k1.felvesz(new Felszereles("arany","arany pénz"));
+        k1.hasznal("arany", 3);
+        
     }
     
 }

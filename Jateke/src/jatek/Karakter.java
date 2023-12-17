@@ -14,7 +14,7 @@ import java.util.Random;
 public class Karakter {
     Random rnd=new Random();
     private int eltero,ugyesseg,szerencse;
-    private ArrayList<Felszereles> felszereles;
+    private ArrayList<Felszereles> felszereles=new ArrayList<Felszereles>();
     Felszereles bot=new Felszereles("bot","bot");
     //Felszereles bot=new Felszereles
 
@@ -25,6 +25,11 @@ public class Karakter {
         
     }
 
+    @Override
+    public String toString() {
+        return "Karakter{" + "eltero=" + eltero + ", ugyesseg=" + ugyesseg + ", szerencse=" + szerencse + '}';
+    }
+    
     public int getEltero() {
         return eltero;
     }
@@ -66,12 +71,29 @@ public class Karakter {
         this.hasznal(nev, db, true);
     }
     public void hasznal(String nev,int db,boolean van){
-        if (van){
-        levonas(nev, db);
+       int[] tomb=new int[felszereles.size()];
+       boolean ures=false;
+       int i=0;
+       int szamlalo=0;
+       for (Felszereles felszereles : felszereles) {
+           szamlalo++;
+            if(nev==felszereles.getNev() && db>0  ){
+                ures=true;
+                tomb[i]=szamlalo;
+                i++;
+            }
         }
-        else{
-            System.out.println("Nincs eleg");
-        }
+       if (ures){
+           if (van==true || szamlalo>=db){
+            for (int x=tomb.length;x>0;){
+                x=x-1;
+                if (db>0){
+                db--;
+                this.felszereles.remove(tomb[x-1]);
+                }
+            }
+           }
+       }
     }
     public void felvesz(Felszereles felszreles){
         this.felvesz(1,felszreles);
