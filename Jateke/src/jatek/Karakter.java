@@ -13,4 +13,5 @@ import java.util.ArrayList;
 public class Karakter {
     private int eltero,ugyesseg,szerencse;
     private ArrayList<String> felszereles;
+    
 }
